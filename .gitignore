@@ -1,0 +1,9 @@
+
+**5. .gitignore**
+
+```gitignore
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
