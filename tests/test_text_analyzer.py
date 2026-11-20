@@ -1,6 +1,6 @@
 import unittest
 
-from text_analyzer import analyze_text,count_words
+from text_analyzer import analyze_text, count_words
 
 
 class TestTextAnalyzer(unittest.TestCase):
