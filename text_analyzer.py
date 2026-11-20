@@ -15,3 +15,13 @@ def count_characters(text: str) -> dict:
         frequency[char] = frequency.get(char, 0) + 1
 
     return frequency
+
+
+def count_words(text: str) -> dict:
+    """Count the frequency of each word."""
+    frequency = {}
+
+    for word in text.split():
+        frequency[word] = frequency.get(word, 0) + 1
+
+    return frequency
