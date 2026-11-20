@@ -1,6 +1,6 @@
 import unittest
 
-from text_analyzer import analyze_text
+from text_analyzer import analyze_text, count_words
 
 
 class TestTextAnalyzer(unittest.TestCase):
@@ -19,6 +19,21 @@ class TestTextAnalyzer(unittest.TestCase):
         self.assertEqual(result["words"], 0)
         self.assertEqual(result["lines"], 0)
 
+    def test_count_words(self):
+        result = count_words("hello python hello")
 
+        self.assertEqual(result, {"hello": 2, "python": 1})
+
+
+    def test_count_words_case_sensitive(self):
+        result = count_words("Python python")
+
+        self.assertEqual(result, {"Python": 1, "python": 1})
+
+
+    def test_count_words_empty_text(self):
+        result = count_words("")
+
+        self.assertEqual(result, {})
 if __name__ == "__main__":
     unittest.main()
